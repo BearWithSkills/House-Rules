@@ -1,1 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #1e1e1e;
+    font-family: 'Roboto', sans-serif;
+    color: #f0f0f0;
+}
+
+/* Header */
+.site-header {
+    background: #292929;
+    border-bottom: 2px solid #444;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.site-logo {
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+}
+.site-title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.main-nav {
+    flex: 1;
+    text-align: right;
+}
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-nav li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+.main-nav a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: 700;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+.main-nav a:hover,
+.main-nav a.active {
+    background: #444;
+}
+
+/* Content Layout */
+.content-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.content {
+    flex: 3;
+    margin-right: 2rem;
+}
+.sidebar {
+    flex: 1;
+    background: #2a2a2a;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Blog Posts */
+.post {
+    background: #2a2a2a;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+.post-header h2 {
+    margin: 0 0 0.5rem 0;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #ffcc00;
+}
+.post-meta {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+.post-body p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Sidebar */
+.sidebar-section {
+    margin-bottom: 2rem;
+}
+.sidebar-section h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.5rem;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.25rem;
+    color: #ffcc00;
+}
+.sidebar-list,
+.progress-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-list li,
+.progress-list li {
+    margin: 0.5rem 0;
+}
+.sidebar-list a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.sidebar-list a:hover {
+    color: #ffcc00;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 1rem;
+    background: #292929;
+    border-top: 2px solid #444;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #ccc;
+}
 
