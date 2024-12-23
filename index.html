@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
     <meta name="description" content="A dev-log and blog for my indie game development project."/>
     <title>House Rules</title>
-    <link rel="stylesheet" href="css/pink.css" />
+
+    <!-- Notice: link element now has an id for JS to swap themes -->
+    <link id="theme-link" rel="stylesheet" href="css/dark.css" />
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,9 +17,16 @@
         <div class="logo-container">
             <img src="images/logo.png" alt="Site Logo" class="site-logo">
             <h1 class="site-title">House Rules</h1>
-        <div class="title-divider"></div>
-        <button class="header-button">Swap</button>
+            
+            <div class="title-divider"></div>
+            
+            <!-- Single toggle switch replacing the button -->
+            <label class="switch">
+                <input type="checkbox" id="themeToggle" />
+                <span class="slider round"></span>
+            </label>
         </div>
+        
         <nav class="main-nav">
             <ul>
                 <li><a href="#home" class="active">Home</a></li>
@@ -78,5 +89,36 @@
     <footer class="site-footer">
         <p>&copy; 2024 My Game Dev Blog. All rights reserved.</p>
     </footer>
+
+    <!-- Optional: Script to remember user theme preference -->
+    <script>
+      const themeToggle = document.getElementById('themeToggle');
+      const themeLink   = document.getElementById('theme-link');
+
+      // On page load, check localStorage for a preferred theme
+      window.addEventListener('load', () => {
+        const savedTheme = localStorage.getItem('preferredTheme');
+        if (savedTheme) {
+          themeLink.setAttribute('href', savedTheme);
+          // If saved theme is the 'light' file, set the toggle to checked
+          if (savedTheme === 'css/light.css') {
+            themeToggle.checked = true;
+          }
+        }
+      });
+
+      // When the user clicks the toggle switch
+      themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+          // Switch to light mode
+          themeLink.setAttribute('href', 'css/light.css');
+          localStorage.setItem('preferredTheme', 'css/light.css');
+        } else {
+          // Switch back to dark mode
+          themeLink.setAttribute('href', 'css/dark.css');
+          localStorage.setItem('preferredTheme', 'css/dark.css');
+        }
+      });
+    </script>
 </body>
 </html>
