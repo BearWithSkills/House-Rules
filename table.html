@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <meta name="description" content="A dev-log and blog for my indie game development project."/>
+    <title>At The Table</title>
+
+    <!-- Same CSS link / toggle theme link as your home page -->
+    <link id="theme-link" rel="stylesheet" href="css/dark.css" />
+
+    <!-- Google Fonts or other resources -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Site Logo" class="site-logo">
+            <h1 class="site-title">House Rules</h1>
+
+            <!-- (Optional) Toggle Switch or Divider/Button if needed -->
+            <div class="title-divider"></div>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle" />
+                <span class="slider round"></span>
+            </label>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <!-- Adjust links to point back to your home page (index.html) or any other pages -->
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#game_dev">Game Dev</a></li>
+                <li><a href="index.html#about">About The Project</a></li>
+                <li><a href="table.html" class="active">At The Table</a></li>
+                <li><a href="index.html#writing">Writing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Same container, but no aside -->
+    <div class="content-container">
+        <main class="content">
+            <!-- Example articles for “At The Table” content -->
+            <article class="post">
+                <header class="post-header">
+                    <h2>At The Table - Introduction</h2>
+                    <p class="post-meta">Posted on January 05, 2025 by <span class="author">Author Name</span></p>
+                </header>
+                <div class="post-body">
+                    <p>Welcome to the “At The Table” section! Here, we explore rules, tips, and stories from tabletop gaming sessions. Whether it’s D&D, board games, or custom house rules, you’ll find it all here.</p>
+                    <p>Stay tuned for stories from our weekly sessions and ideas you can incorporate into your own game nights!</p>
+                </div>
+            </article>
+
+            <article class="post">
+                <header class="post-header">
+                    <h2>House Rules for Co-op Board Games</h2>
+                    <p class="post-meta">Posted on January 10, 2025 by <span class="author">Author Name</span></p>
+                </header>
+                <div class="post-body">
+                    <p>We love adding small twists to our favorite co-op board games, from extra difficulty modes to narrative-driven events. Here are some of our current favorites:</p>
+                    <ul>
+                        <li>“Sudden Betrayal” variant in Pandemic</li>
+                        <li>“Resource Scarcity” expansions for Settlers of Catan</li>
+                        <li>“Narrative Quests” for Gloomhaven</li>
+                    </ul>
+                    <p>Try them out if you’re looking for a fresh challenge!</p>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 House Rules. All rights reserved.</p>
+    </footer>
+
+    <!-- Optional: Same theme toggle script as your home page -->
+    <script>
+      const themeToggle = document.getElementById('themeToggle');
+      const themeLink   = document.getElementById('theme-link');
+
+      // On page load, check localStorage for a preferred theme
+      window.addEventListener('load', () => {
+        const savedTheme = localStorage.getItem('preferredTheme');
+        if (savedTheme) {
+          themeLink.setAttribute('href', savedTheme);
+          if (savedTheme === 'css/light.css') {
+            themeToggle.checked = true;
+          }
+        }
+      });
+
+      // When the user clicks the toggle switch
+      themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+          // Switch to light mode
+          themeLink.setAttribute('href', 'css/light.css');
+          localStorage.setItem('preferredTheme', 'css/light.css');
+        } else {
+          // Switch back to dark mode
+          themeLink.setAttribute('href', 'css/dark.css');
+          localStorage.setItem('preferredTheme', 'css/dark.css');
+        }
+      });
+    </script>
+</body>
+</html>
