@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <meta name="description" content="A dev-log and blog for my indie game development project."/>
+  <title>About The Project</title>
+
+  <!-- Same CSS link / toggle theme link as your home page -->
+  <link id="theme-link" rel="stylesheet" href="css/dark.css" />
+
+  <!-- Google Fonts or other resources -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Site Logo" class="site-logo">
+      <h1 class="site-title">House Rules</h1>
+
+      <!-- Toggle Switch -->
+      <div class="title-divider"></div>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game_dev.html">Game Dev</a></li>
+        <li><a href="about.html" class="active">About The Project</a></li>
+        <li><a href="table.html">At The Table</a></li>
+        <li><a href="writing.html">Writing</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main container, no aside -->
+  <div class="content-container">
+    <main class="content">
+      <article class="post">
+        <header class="post-header">
+          <h2>About This Project</h2>
+          <p class="post-meta">Posted on January 10, 2025 by <span class="author">Author Name</span></p>
+        </header>
+        <div class="post-body">
+          <p>The “House Rules” project is a passion-driven endeavor to merge tabletop gaming culture with video game development insights. Our goal is to provide a space for shared rulesets, dev-logs, and creative writing that inspire both players and developers alike.</p>
+          <p>From behind-the-scenes peeks into our 2D platformer’s development to custom board-game expansions, we aim to bring ideas to life that spark collaboration and creativity.</p>
+        </div>
+      </article>
+
+      <article class="post">
+        <header class="post-header">
+          <h2>Our Goals & Vision</h2>
+          <p class="post-meta">Posted on January 12, 2025 by <span class="author">Author Name</span></p>
+        </header>
+        <div class="post-body">
+          <ul>
+            <li>**Community-Driven:** Encourage feedback, suggestions, and shared ideas.</li>
+            <li>**Open Development:** Transparent dev-logs on game features and design decisions.</li>
+            <li>**Cross-Medium Inspiration:** Bridging the gap between tabletop mechanics and digital gaming experiences.</li>
+          </ul>
+          <p>We believe in iterative growth, listening to our players, and evolving “House Rules” to align with what resonates best. If you have any questions or ideas, feel free to drop a line in our contact section!</p>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 House Rules. All rights reserved.</p>
+  </footer>
+
+  <!-- Theme toggle script -->
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const themeLink   = document.getElementById('theme-link');
+
+    // On page load, check localStorage for a preferred theme
+    window.addEventListener('load', () => {
+      const savedTheme = localStorage.getItem('preferredTheme');
+      if (savedTheme) {
+        themeLink.setAttribute('href', savedTheme);
+        if (savedTheme === 'css/light.css') {
+          themeToggle.checked = true;
+        }
+      }
+    });
+
+    // When the user clicks the toggle switch
+    themeToggle.addEventListener('change', () => {
+      if (themeToggle.checked) {
+        // Switch to light mode
+        themeLink.setAttribute('href', 'css/light.css');
+        localStorage.setItem('preferredTheme', 'css/light.css');
+      } else {
+        // Switch back to dark mode
+        themeLink.setAttribute('href', 'css/dark.css');
+        localStorage.setItem('preferredTheme', 'css/dark.css');
+      }
+    });
+  </script>
+</body>
+</html>
