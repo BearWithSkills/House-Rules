@@ -33,6 +33,38 @@ body {
     flex: 1;
 }
 
+/* If not present, ensure .logo-container is flex */
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+/* Small dividing line after the site title */
+.title-divider {
+    width: 1.5px;
+    height: 2rem;
+    background-color: #DEDECE; /* matches the light border color */
+    margin: 0 1rem;
+}
+
+.header-button {
+    background-color: #506886;  
+    color: #FFFFFF;            
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+.header-button:hover {
+    background-color: #758DA6;  
+    color: #FFFFFF;
+}
+
 .site-logo {
     height: 50px;
     width: 50px;
