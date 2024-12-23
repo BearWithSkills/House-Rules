@@ -32,7 +32,7 @@ body {
   display: inline-block;
   width: 50px;
   height: 26px;
-  margin-left: 6px; /* Spacing next to your divider/title */
+  margin-left: 4px; /* Spacing next to your divider/title */
 }
 
 /* Hide the default checkbox */
@@ -47,7 +47,7 @@ body {
   position: absolute;
   cursor: pointer;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #ccc; /* Off state */
+  background-color: #ffcc00; /* Off state */
   transition: .4s;
   border-radius: 34px;
 }
@@ -60,7 +60,7 @@ body {
   width: 18px;
   left: 4px;
   bottom: 4px;
-  background-color: #ffcc00;
+  background-color: white;
   transition: .4s;
   border-radius: 50%;
 }
