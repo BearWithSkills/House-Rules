@@ -21,7 +21,7 @@ body {
     flex: 1;
 }
 .title-divider {
-    width: 1px;
+    width: 1.5px;
     height: 2rem;
     background-color: #444;
     margin: 0 1rem;
