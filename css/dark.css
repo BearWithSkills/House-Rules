@@ -47,7 +47,7 @@ body {
   position: absolute;
   cursor: pointer;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #ffcc00; /* Off state */
+  background-color: #ccc; /* Off state */
   transition: .4s;
   border-radius: 34px;
 }
