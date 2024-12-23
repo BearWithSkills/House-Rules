@@ -1,12 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #F5F5F5; /* Soft gray for the overall background */
+    background-color: #F5F5F5;
     font-family: 'Roboto', sans-serif;
-    color: #333333; /* Dark gray text */
+    color: #333333;
 }
 
-/* HEADER */
+/* Header */
 .site-header {
     background-color: #FFFFFF; /* White header to contrast the soft gray body */
     border-bottom: 2px solid #E0E0E0;
@@ -15,27 +15,24 @@ body {
     padding: 1rem 2rem;
     flex-wrap: wrap;
 }
-
 .logo-container {
     display: flex;
     align-items: center;
     flex: 1;
 }
-
 .title-divider {
     width: 1.5px; 
     height: 2rem; 
     background-color: #E0E0E0; 
     margin: 0 1rem; 
 }
-
-/* Container for theme toggle */
+/* Toggle Switch Container */
 .switch {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 26px;
-  margin-lef: 6px; /* Adjust spacing as needed next to your divider/title */
+  margin-lef: 0px; /* spacing given by divider */
 }
 
 /* Hide the default checkbox */
@@ -84,7 +81,6 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
 .site-logo {
     height: 50px;
     width: 50px;
@@ -97,23 +93,19 @@ input:checked + .slider:before {
     /* font-family: 'Ubuntu Mono', monospace; */
     color: #FF7F8F; /* Warm pink accent for the site title */
 }
-
 .main-nav {
     flex: 1;
     text-align: right;
 }
-
 .main-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 .main-nav li {
     display: inline-block;
     margin-left: 1rem;
 }
-
 .main-nav a {
     text-decoration: none;
     color: #333333; /* Dark gray links for readability on white background */
@@ -122,16 +114,13 @@ input:checked + .slider:before {
     border-radius: 4px;
     transition: background 0.3s, color 0.3s;
 }
-
 .main-nav a:hover,
 .main-nav a.active {
     background-color: #FF7F8F; /* Warm pink hover */
     color: #FFFFFF;           /* White text on pink */
 }
 
-/* ----------------------------------------------
-   CONTENT LAYOUT
----------------------------------------------- */
+/* Content Layout */
 .content-container {
     display: flex;
     max-width: 1200px;
@@ -139,11 +128,10 @@ input:checked + .slider:before {
     padding: 0 1rem;
     gap: 2rem; /* space between main and sidebar */
 }
-
 .content {
     flex: 3;
+    margin-right: 2rem;
 }
-
 .sidebar {
     flex: 1;
     background-color: #FFFFFF;
@@ -152,9 +140,7 @@ input:checked + .slider:before {
     border: 1px solid #E0E0E0;
 }
 
-/* ----------------------------------------------
-   BLOG POSTS / DEV-LOG ARTICLES
----------------------------------------------- */
+/* Blog Posts */
 .post {
     background-color: #FFFFFF; /* White cards for posts */
     margin-bottom: 2rem;
@@ -162,7 +148,6 @@ input:checked + .slider:before {
     border-radius: 8px;
     border: 1px solid #E0E0E0;
 }
-
 .post-header h2 {
     margin: 0 0 0.5rem 0;
     font-family: 'Ubuntu Mono', monospace;
@@ -170,13 +155,11 @@ input:checked + .slider:before {
     font-size: 1.75rem;
     color: #FF7F8F; /* Warm pink accent for post titles */
 }
-
 .post-meta {
     font-size: 0.9rem;
     color: #666666; /* Slightly lighter gray for metadata */
     margin-bottom: 1rem;
 }
-
 .post-body p {
     line-height: 1.6;
     margin-bottom: 1rem;
@@ -197,7 +180,6 @@ input:checked + .slider:before {
     text-decoration: underline;
     transition: color 0.3s;
 }
-
 .post-body a:hover {
     color: #FFAEB6; /* Lighter pink on hover */
 }
@@ -206,7 +188,6 @@ input:checked + .slider:before {
 figure {
     margin: 1rem 0;
 }
-
 figure img {
     max-width: 100%;
     border: 2px solid #E0E0E0;
@@ -214,7 +195,6 @@ figure img {
     display: block;
     margin: 0 auto;
 }
-
 figcaption {
     font-size: 0.85rem;
     text-align: center;
@@ -222,13 +202,10 @@ figcaption {
     margin-top: 0.5rem;
 }
 
-/* ----------------------------------------------
-   SIDEBAR
----------------------------------------------- */
+/* Sidebar */
 .sidebar-section {
     margin-bottom: 2rem;
 }
-
 .sidebar-section h3 {
     margin-top: 0;
     border-bottom: 2px solid #E0E0E0;
@@ -237,33 +214,27 @@ figcaption {
     font-size: 1.25rem;
     color: #FF7F8F;
 }
-
 .sidebar-list,
 .progress-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 .sidebar-list li,
 .progress-list li {
     margin: 0.5rem 0;
     color: #333333;
 }
-
 .sidebar-list a {
     color: #333333;
     text-decoration: none;
     transition: color 0.3s;
 }
-
 .sidebar-list a:hover {
     color: #FF7F8F;
 }
 
-/* ----------------------------------------------
-   FOOTER
----------------------------------------------- */
+/* Footer */
 .site-footer {
     text-align: center;
     padding: 1rem;
