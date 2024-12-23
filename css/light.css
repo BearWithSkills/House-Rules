@@ -1,0 +1,221 @@
+/* ----------------------------------------------
+   RESET / BASE STYLES
+---------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #23262b; /* Dark, subtle background */
+    font-family: 'Roboto', sans-serif;
+    color: #fdfdfd; /* Light text on dark background */
+}
+
+/* ----------------------------------------------
+   HEADER
+---------------------------------------------- */
+.site-header {
+    background-color: #2d3038;
+    border-bottom: 2px solid #43464f;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.site-logo {
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #ffbb77; /* Accent color for site title */
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.main-nav {
+    flex: 1;
+    text-align: right;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #fdfdfd;
+    font-weight: 700;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #43464f; /* Hover color */
+    color: #ffbb77;           /* Accent color */
+}
+
+/* ----------------------------------------------
+   CONTENT LAYOUT
+---------------------------------------------- */
+.content-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem; /* space between main and sidebar */
+}
+
+.content {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #2d3038;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #43464f;
+}
+
+/* ----------------------------------------------
+   BLOG POSTS / DEV-LOG ARTICLES
+---------------------------------------------- */
+.post {
+    background-color: #2d3038;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #43464f;
+}
+
+.post-header h2 {
+    margin: 0 0 0.5rem 0;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #ffbb77; /* Accent color for headings */
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #c8c8c8;
+    margin-bottom: 1rem;
+}
+
+.post-body p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #eeeeee;
+}
+
+.post-body h3,
+.post-body h4 {
+    margin-top: 1.5rem;
+    font-family: 'Ubuntu Mono', monospace;
+    color: #ffbb77;
+}
+
+.post-body a {
+    color: #ffbb77;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.post-body a:hover {
+    color: #ffd5aa;
+}
+
+/* Optional: Figure and image styles for dev-log screenshots / previews */
+figure {
+    margin: 1rem 0;
+}
+
+figure img {
+    max-width: 100%;
+    border: 2px solid #43464f;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    text-align: center;
+    color: #cccccc;
+    margin-top: 0.5rem;
+}
+
+/* ----------------------------------------------
+   SIDEBAR
+---------------------------------------------- */
+.sidebar-section {
+    margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #43464f;
+    padding-bottom: 0.5rem;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.25rem;
+    color: #ffbb77;
+}
+
+.sidebar-list,
+.progress-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-list li,
+.progress-list li {
+    margin: 0.5rem 0;
+    color: #eeeeee;
+}
+
+.sidebar-list a {
+    color: #fdfdfd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar-list a:hover {
+    color: #ffbb77;
+}
+
+/* ----------------------------------------------
+   FOOTER
+---------------------------------------------- */
+.site-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2d3038;
+    border-top: 2px solid #43464f;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #cccccc;
+}
