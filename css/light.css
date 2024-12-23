@@ -35,7 +35,7 @@ body {
   display: inline-block;
   width: 50px;
   height: 26px;
-  margin-left: 0 1rem; /* Adjust spacing as needed next to your divider/title */
+  margin-left: 10px; /* Adjust spacing as needed next to your divider/title */
 }
 
 /* Hide the default checkbox */
