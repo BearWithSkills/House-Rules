@@ -126,7 +126,6 @@ input:checked + .slider:before {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
-    gap: 2rem; /* space between main and sidebar */
 }
 .content {
     flex: 3;
