@@ -1,0 +1,223 @@
+/* ----------------------------------------------
+   RESET / BASE STYLES
+---------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5; /* Soft gray for the overall background */
+    font-family: 'Roboto', sans-serif;
+    color: #333333; /* Dark gray text */
+}
+
+/* ----------------------------------------------
+   HEADER
+---------------------------------------------- */
+.site-header {
+    background-color: #FFFFFF; /* White header to contrast the soft gray body */
+    border-bottom: 2px solid #E0E0E0;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.site-logo {
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: 'Ubuntu Mono', monospace;
+    color: #FF7F8F; /* Warm pink accent for the site title */
+}
+
+.main-nav {
+    flex: 1;
+    text-align: right;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333333; /* Dark gray links for readability on white background */
+    font-weight: 700;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #FF7F8F; /* Warm pink hover */
+    color: #FFFFFF;           /* White text on pink */
+}
+
+/* ----------------------------------------------
+   CONTENT LAYOUT
+---------------------------------------------- */
+.content-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem; /* space between main and sidebar */
+}
+
+.content {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+}
+
+/* ----------------------------------------------
+   BLOG POSTS / DEV-LOG ARTICLES
+---------------------------------------------- */
+.post {
+    background-color: #FFFFFF; /* White cards for posts */
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+}
+
+.post-header h2 {
+    margin: 0 0 0.5rem 0;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #FF7F8F; /* Warm pink accent for post titles */
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #666666; /* Slightly lighter gray for metadata */
+    margin-bottom: 1rem;
+}
+
+.post-body p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333333; /* Main text color */
+}
+
+/* Subheadings within posts */
+.post-body h3,
+.post-body h4 {
+    margin-top: 1.5rem;
+    font-family: 'Ubuntu Mono', monospace;
+    color: #FF7F8F;
+}
+
+/* Links in posts */
+.post-body a {
+    color: #FF7F8F;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.post-body a:hover {
+    color: #FFAEB6; /* Lighter pink on hover */
+}
+
+/* Optional: Figure and image styles for dev-log screenshots / previews */
+figure {
+    margin: 1rem 0;
+}
+
+figure img {
+    max-width: 100%;
+    border: 2px solid #E0E0E0;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    text-align: center;
+    color: #666666;
+    margin-top: 0.5rem;
+}
+
+/* ----------------------------------------------
+   SIDEBAR
+---------------------------------------------- */
+.sidebar-section {
+    margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #E0E0E0;
+    padding-bottom: 0.5rem;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.25rem;
+    color: #FF7F8F;
+}
+
+.sidebar-list,
+.progress-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-list li,
+.progress-list li {
+    margin: 0.5rem 0;
+    color: #333333;
+}
+
+.sidebar-list a {
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar-list a:hover {
+    color: #FF7F8F;
+}
+
+/* ----------------------------------------------
+   FOOTER
+---------------------------------------------- */
+.site-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #FFFFFF;
+    border-top: 2px solid #E0E0E0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666666;
+}
