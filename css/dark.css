@@ -32,7 +32,7 @@ body {
   display: inline-block;
   width: 50px;
   height: 26px;
-  margin-left: 4px; /* Spacing next to your divider/title */
+  margin-left: 0px; /* spacing given by divider */
 }
 
 /* Hide the default checkbox */
@@ -52,7 +52,7 @@ body {
   border-radius: 34px;
 }
 
-/* The circle inside the slider */
+/* The slider circle */
 .slider:before {
   position: absolute;
   content: "";
@@ -81,7 +81,6 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
 .site-logo {
     height: 50px;
     width: 50px;
