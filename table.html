@@ -6,6 +6,15 @@
     <meta name="description" content="A dev-log and blog for my indie game development project."/>
     <title>At The Table</title>
 
+        <!-- toggle script begins here to avoid flash of default theme in alt theme -->
+    <script>
+      // Check localStorage for a preferred theme
+      const savedTheme = localStorage.getItem('preferredTheme') || 'css/dark.css';
+
+      // Dynamically load the theme before the page renders
+      document.write(`<link id="theme-link" rel="stylesheet" href="${savedTheme}" />`);
+    </script>
+
     <!-- Same CSS link / toggle theme link as your home page -->
     <link id="theme-link" rel="stylesheet" href="css/dark.css" />
 
@@ -76,33 +85,23 @@
     </footer>
 
     <!-- Optional: Same theme toggle script as your home page -->
-    <script>
-      const themeToggle = document.getElementById('themeToggle');
-      const themeLink   = document.getElementById('theme-link');
+  <!-- Theme toggle script -->
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const themeLink = document.getElementById('theme-link');
 
-      // On page load, check localStorage for a preferred theme
-      window.addEventListener('load', () => {
-        const savedTheme = localStorage.getItem('preferredTheme');
-        if (savedTheme) {
-          themeLink.setAttribute('href', savedTheme);
-          if (savedTheme === 'css/light.css') {
-            themeToggle.checked = true;
-          }
-        }
-      });
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('preferredTheme');
+      if (savedTheme === 'css/light.css') {
+        themeToggle.checked = true;
+      }
+    });
 
-      // When the user clicks the toggle switch
-      themeToggle.addEventListener('change', () => {
-        if (themeToggle.checked) {
-          // Switch to light mode
-          themeLink.setAttribute('href', 'css/light.css');
-          localStorage.setItem('preferredTheme', 'css/light.css');
-        } else {
-          // Switch back to dark mode
-          themeLink.setAttribute('href', 'css/dark.css');
-          localStorage.setItem('preferredTheme', 'css/dark.css');
-        }
-      });
-    </script>
+    themeToggle.addEventListener('change', () => {
+      const theme = themeToggle.checked ? 'css/light.css' : 'css/dark.css';
+      themeLink.setAttribute('href', theme);
+      localStorage.setItem('preferredTheme', theme);
+    });
+  </script>
 </body>
 </html>
